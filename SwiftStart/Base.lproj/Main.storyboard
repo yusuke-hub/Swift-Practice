@@ -23,11 +23,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRL-tZ-Mos">
-                                <rect key="frame" x="192" y="367" width="31" height="30"/>
+                                <rect key="frame" x="172" y="318" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="次へ"/>
                                 <connections>
-                                    <segue destination="73Q-UY-vd7" kind="presentation" id="38b-sc-37C"/>
+                                    <segue destination="73Q-UY-vd7" kind="presentation" modalTransitionStyle="crossDissolve" id="38b-sc-37C"/>
                                 </connections>
                             </button>
                         </subviews>
