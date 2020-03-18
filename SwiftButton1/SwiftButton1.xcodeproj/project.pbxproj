@@ -67,11 +67,11 @@
 				118FED2B24222078000A8214 /* AppDelegate.swift */,
 				118FED2D24222078000A8214 /* SceneDelegate.swift */,
 				118FED2F24222078000A8214 /* ViewController.swift */,
+				118FED4324223055000A8214 /* NextViewController.swift */,
 				118FED3124222078000A8214 /* Main.storyboard */,
 				118FED342422207D000A8214 /* Assets.xcassets */,
 				118FED362422207D000A8214 /* LaunchScreen.storyboard */,
 				118FED392422207D000A8214 /* Info.plist */,
-				118FED4324223055000A8214 /* NextViewController.swift */,
 			);
 			path = SwiftButton1;
 			sourceTree = "<group>";

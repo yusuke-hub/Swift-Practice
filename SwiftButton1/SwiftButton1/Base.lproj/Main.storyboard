@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="-139.13043478260872" y="154.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Next View Controller-->
         <scene sceneID="siP-oJ-wsp">
             <objects>
-                <viewController id="HcU-94-Ozb" sceneMemberID="viewController">
+                <viewController id="HcU-94-Ozb" customClass="NextViewController" customModule="SwiftButton1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jjh-pJ-r7k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
