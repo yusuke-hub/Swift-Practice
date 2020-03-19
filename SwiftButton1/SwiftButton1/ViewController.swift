@@ -12,9 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        //　勝手に呼ばれる場所
     }
+    @IBAction func tap(_ sender: AnyObject) {
+        // ボタンを押して離した時の処理
 
-
+    }
 }
 
