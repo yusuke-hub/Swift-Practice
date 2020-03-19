@@ -21,7 +21,7 @@
                                 <state key="normal" image="setting.png"/>
                                 <connections>
                                     <action selector="tap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zGd-ew-PwB"/>
-                                    <segue destination="HcU-94-Ozb" kind="presentation" id="X0C-Da-GQC"/>
+                                    <segue destination="HcU-94-Ozb" kind="presentation" modalTransitionStyle="flipHorizontal" id="X0C-Da-GQC"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最初の画面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wec-mx-qYc">
