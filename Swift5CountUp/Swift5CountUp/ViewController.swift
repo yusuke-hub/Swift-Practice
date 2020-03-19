@@ -33,6 +33,12 @@ class ViewController: UIViewController {
         count = count - 1
         
         label.text = String(count)
+        
+        if (count < 0){
+            
+        label.text = String(count)
+        
+        }
     }
 }
 
