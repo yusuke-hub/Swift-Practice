@@ -10,13 +10,20 @@ import UIKit
 
 class NextViewController: UIViewController {
 
+    @IBOutlet var changeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func change(_ sender: AnyObject) {
+        
+        // 次の画面へと描かれたラベルの文字を変更したい
+        changeLabel.text = "暗号が解除されました。"
+    }
+    
     /*
     // MARK: - Navigation
 
