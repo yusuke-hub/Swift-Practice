@@ -13,6 +13,14 @@
 		115F7B7824237209007E2FA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115F7B7624237209007E2FA6 /* Main.storyboard */; };
 		115F7B7A2423720B007E2FA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115F7B792423720B007E2FA6 /* Assets.xcassets */; };
 		115F7B7D2423720B007E2FA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115F7B7B2423720B007E2FA6 /* LaunchScreen.storyboard */; };
+		115F7B8C242373CC007E2FA6 /* dash5.png in Resources */ = {isa = PBXBuildFile; fileRef = 115F7B84242373CC007E2FA6 /* dash5.png */; };
+		115F7B8D242373CC007E2FA6 /* dash1.png in Resources */ = {isa = PBXBuildFile; fileRef = 115F7B85242373CC007E2FA6 /* dash1.png */; };
+		115F7B8E242373CC007E2FA6 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 115F7B86242373CC007E2FA6 /* start.png */; };
+		115F7B8F242373CC007E2FA6 /* dash3.png in Resources */ = {isa = PBXBuildFile; fileRef = 115F7B87242373CC007E2FA6 /* dash3.png */; };
+		115F7B90242373CC007E2FA6 /* dash0.png in Resources */ = {isa = PBXBuildFile; fileRef = 115F7B88242373CC007E2FA6 /* dash0.png */; };
+		115F7B91242373CC007E2FA6 /* dash4.png in Resources */ = {isa = PBXBuildFile; fileRef = 115F7B89242373CC007E2FA6 /* dash4.png */; };
+		115F7B92242373CC007E2FA6 /* dash2.png in Resources */ = {isa = PBXBuildFile; fileRef = 115F7B8A242373CC007E2FA6 /* dash2.png */; };
+		115F7B93242373CC007E2FA6 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 115F7B8B242373CC007E2FA6 /* stop.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		115F7B792423720B007E2FA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		115F7B7C2423720B007E2FA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		115F7B7E2423720B007E2FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		115F7B84242373CC007E2FA6 /* dash5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash5.png; sourceTree = "<group>"; };
+		115F7B85242373CC007E2FA6 /* dash1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash1.png; sourceTree = "<group>"; };
+		115F7B86242373CC007E2FA6 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		115F7B87242373CC007E2FA6 /* dash3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash3.png; sourceTree = "<group>"; };
+		115F7B88242373CC007E2FA6 /* dash0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash0.png; sourceTree = "<group>"; };
+		115F7B89242373CC007E2FA6 /* dash4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash4.png; sourceTree = "<group>"; };
+		115F7B8A242373CC007E2FA6 /* dash2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash2.png; sourceTree = "<group>"; };
+		115F7B8B242373CC007E2FA6 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,14 @@
 		115F7B6F24237209007E2FA6 /* Swift4Manga1 */ = {
 			isa = PBXGroup;
 			children = (
+				115F7B88242373CC007E2FA6 /* dash0.png */,
+				115F7B85242373CC007E2FA6 /* dash1.png */,
+				115F7B8A242373CC007E2FA6 /* dash2.png */,
+				115F7B87242373CC007E2FA6 /* dash3.png */,
+				115F7B89242373CC007E2FA6 /* dash4.png */,
+				115F7B84242373CC007E2FA6 /* dash5.png */,
+				115F7B86242373CC007E2FA6 /* start.png */,
+				115F7B8B242373CC007E2FA6 /* stop.png */,
 				115F7B7024237209007E2FA6 /* AppDelegate.swift */,
 				115F7B7224237209007E2FA6 /* SceneDelegate.swift */,
 				115F7B7424237209007E2FA6 /* ViewController.swift */,
@@ -126,8 +150,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				115F7B7D2423720B007E2FA6 /* LaunchScreen.storyboard in Resources */,
+				115F7B8C242373CC007E2FA6 /* dash5.png in Resources */,
+				115F7B93242373CC007E2FA6 /* stop.png in Resources */,
+				115F7B92242373CC007E2FA6 /* dash2.png in Resources */,
 				115F7B7A2423720B007E2FA6 /* Assets.xcassets in Resources */,
 				115F7B7824237209007E2FA6 /* Main.storyboard in Resources */,
+				115F7B90242373CC007E2FA6 /* dash0.png in Resources */,
+				115F7B8F242373CC007E2FA6 /* dash3.png in Resources */,
+				115F7B8E242373CC007E2FA6 /* start.png in Resources */,
+				115F7B91242373CC007E2FA6 /* dash4.png in Resources */,
+				115F7B8D242373CC007E2FA6 /* dash1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
