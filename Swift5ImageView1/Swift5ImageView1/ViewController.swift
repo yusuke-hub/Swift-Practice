@@ -23,10 +23,24 @@ class ViewController: UIViewController {
     
     @IBAction func changeImage(_ sender: Any) {
         
+        count = count + 1
+        
 //        もしtapが10回されたら
 //        imageViewのimageをbackgroundに変える
-        
+        if (count >= 10) {
+            
+            imageView.image = UIImage(named: "background")
+          
+            if(count >= 20) {
+                
+                imageView.image = UIImage(named: "beach")
+                if(count >= 30) {
+                    
+                    imageView.image = UIImage(named: "background")
+                    
+                }
+            }
+        }
     }
-    
 }
 
