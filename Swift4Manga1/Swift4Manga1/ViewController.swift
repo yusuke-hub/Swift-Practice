@@ -71,6 +71,9 @@ class ViewController: UIViewController {
     
     @IBAction func stop(_ sender: Any) {
         
+        timer1.invalidate()
+        timer2.invalidate()
+
     }
 }
 
