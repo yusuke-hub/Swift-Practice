@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="gj5-aj-ddv">
             <objects>
-                <viewController id="lhn-BT-2x0" sceneMemberID="viewController">
+                <viewController id="lhn-BT-2x0" customClass="ViewController" customModule="SwiftWKWebView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="04I-uV-3jq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,13 +39,28 @@
                         <viewLayoutGuide key="safeArea" id="2RT-bz-BzZ"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="←" id="HGd-MG-q91"/>
+                        <barButtonItem title="←" id="HGd-MG-q91">
+                            <connections>
+                                <action selector="back:" destination="lhn-BT-2x0" id="TEl-zI-KKv"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="PGz-se-fhy"/>
-                        <barButtonItem title="→" id="L0B-y9-q5w"/>
+                        <barButtonItem title="→" id="L0B-y9-q5w">
+                            <connections>
+                                <action selector="forward:" destination="lhn-BT-2x0" id="Ldx-DX-lXC"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="ZmQ-8Y-Qsz"/>
-                        <barButtonItem title="Item" systemItem="refresh" id="bIj-am-Ct0"/>
+                        <barButtonItem title="Item" systemItem="refresh" id="bIj-am-Ct0">
+                            <connections>
+                                <action selector="reflesh:" destination="lhn-BT-2x0" id="s7m-t5-PAb"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="NAo-eL-G5P" id="7Xb-P0-yUt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6vV-kD-wr5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
