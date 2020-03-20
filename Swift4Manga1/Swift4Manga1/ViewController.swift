@@ -19,6 +19,10 @@ class ViewController: UIViewController {
     
     var timer1 = Timer()
     
+    var timer2 = Timer()
+    
+    var updateCount = 0
+    
     var countUp = 0
     
     override func viewDidLoad() {
@@ -47,10 +51,26 @@ class ViewController: UIViewController {
             
         //runerImageViewnerImageViewに画像を反映する
         
+        })
+    
+        timer2 = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
+            
+            if(self.updateCount > 5){
+            
+                self.runnerImageView.image = UIImage(named: "dash0.png")
+            
+            }else{
+                
+                self.runnerImageView.image = self.imageArray[self.updateCount]
+            }
+                
+            self.updateCount = self.updateCount + 1
+                
+        })
     }
     
     @IBAction func stop(_ sender: Any) {
         
     }
 }
-}
+
