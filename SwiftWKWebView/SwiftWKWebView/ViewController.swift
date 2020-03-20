@@ -12,7 +12,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
     @IBOutlet var webView: WKWebView!
     
-    var urlString:String = "https://www.udemy.com/cart/success/281623954/"
+    var urlString:String = "https://www.youtube.com/watch?v=4zrQyBTW17Y"
     
     var indicator:UIActivityIndicatorView!
     
@@ -62,7 +62,6 @@ class ViewController: UIViewController, WKNavigationDelegate {
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         
         //インディケータを回す
-        
         indicator.startAnimating()
     }
     
