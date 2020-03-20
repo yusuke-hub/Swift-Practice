@@ -23,10 +23,14 @@ class ViewController: UIViewController {
     
     var updateCount = 0
     
+    @IBOutlet var runButton: UIButton!
+    
     var countUp = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        countLabel.text = "0"
         
         let image0 = UIImage(named: "dash0.png")
         let image1 = UIImage(named: "dash1.png")
@@ -40,8 +44,9 @@ class ViewController: UIViewController {
     
     @IBAction func run(_ sender: Any) {
         
+        runButton.isEnabled = false
         //タイマーをスタート
-        timer1 = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block:  { (timer) in
+        timer1 = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block:  { (timer) in
             
             //カウントアップ
             self.countUp = self.countUp + 1
@@ -72,6 +77,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func stop(_ sender: Any) {
+        
+        runButton.isEnabled = true
         
         timer1.invalidate()
         timer2.invalidate()
