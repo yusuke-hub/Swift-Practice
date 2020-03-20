@@ -40,7 +40,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
     }
     @IBAction func signIn(_ sender: Any) {
         
-        resultLabel.text = mailTextField.text! + "" + passwordTextField!
+        resultLabel.text = mailTextField.text! + " " + passwordTextField.text!
     }
     
 }
