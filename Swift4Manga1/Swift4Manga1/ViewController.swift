@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     @IBAction func run(_ sender: Any) {
         
         //タイマーをスタート
-        timer1 = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block:  { (timer) in
+        timer1 = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block:  { (timer) in
             
             //カウントアップ
             self.countUp = self.countUp + 1
@@ -53,10 +53,12 @@ class ViewController: UIViewController {
         
         })
     
-        timer2 = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
+        timer2 = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (timer) in
             
             if(self.updateCount > 5){
-            
+                
+                self.updateCount = 0
+                
                 self.runnerImageView.image = UIImage(named: "dash0.png")
             
             }else{
