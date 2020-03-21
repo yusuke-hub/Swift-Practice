@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="137.18140929535232"/>
         </scene>
-        <!--View Controller-->
+        <!--Sound View Controller-->
         <scene sceneID="Kkj-Zu-ug4">
             <objects>
-                <viewController id="6Hp-fQ-1ql" sceneMemberID="viewController">
+                <viewController id="6Hp-fQ-1ql" customClass="SoundViewController" customModule="SwiftMousouLINE1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3D8-3P-kI2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
