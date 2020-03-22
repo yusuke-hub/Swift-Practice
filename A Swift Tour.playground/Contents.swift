@@ -124,4 +124,25 @@ func greet(_ person: String, on day: String) -> String {
 }
 greet(person: "John", day: "Wednesday")
 
-
+func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
+    var min = scores[0]
+    var max = scores[0]
+    var sum = 0
+    
+    for score in scores {
+        if score > max {
+            max = score
+        } else if score < min {
+            min = score
+        }
+        sum += score
+    }
+    return(min, max, sum)
+}
+// 1回目 (5,5,5)
+// 2回目 (5,3,8)
+// 3回目 (100,5,108)
+// 4回目 (5,3,111)
+// 5回目 (9,5,120)
+let statistics = calculateStatistics(scores: [5, 3, 100, 3])
+print(statistics.sum)
