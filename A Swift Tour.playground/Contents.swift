@@ -337,7 +337,7 @@ let ace = Rank.ace
 let aceRawValue = ace.rawValue
 
 if let convertedRank = Rank(rawValue: 3) {
-    let threeDescription = convertedRank.simpleDescription()
+    let _threeDescription = convertedRank.simpleDescription()
 }
 
 enum Suit {
@@ -374,6 +374,7 @@ case let .failure(message):
     print("Failure... \(message)")
 }
 
+// Struct:継承できないクラス
 struct Card {
     var rank: Rank
     var suit: Suit
@@ -381,4 +382,34 @@ struct Card {
     return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
     }
 }
-let th
+let threeOfSpades = Card(rank: .three, suit: .spades)
+let threeOfSpadesDescription = threeOfSpades.simpleDescription()
+
+protocol ExampleProtocol {
+    var simpleDescription: String { get }
+    mutating func adjust ()
+}
+
+class SimpleClass: ExampleProtocol {
+    var simpleDescription: String = "A very simple class"
+    var anotherProperty: Int = 69105
+    func adjust() {
+        simpleDescription += " Now 100% adjusted."
+    }
+}
+var a = SimpleClass()
+a.adjust()
+let aDescription = a.simpleDescription
+
+struct SimpleStructure: ExampleProtocol {
+    var simpleDescription: String = "A simple structure"
+    mutating func adjust(){
+        simpleDescription += " (adjusted)"
+    }
+}
+var b = SimpleStructure()
+b.adjust()
+let bDescription = b.simpleDescription
+
+
+
