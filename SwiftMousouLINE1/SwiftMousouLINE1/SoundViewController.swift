@@ -15,12 +15,30 @@ class SoundViewController: UIViewController {
     
     @IBOutlet var imageView2: UIImageView!
     
+    var audioPlayer : AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        画面が表示された時に画像を非表示
+        // 画面が表示された時に画像を非表示
         imageView2.isHidden = true
         
-        // Do any additional setup after loading the view.
+        // 秒数を非表示にする
+        timeLabel.isHidden = true
+        
+        // 音声を再生する
+        if let url = Bundle.main.url(forResource: "callMusic", withExtension: "mp3"){
+            do{
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.play()
+            } catch {
+                // プレイヤー作成失敗
+                // その場合は、プレイヤーをnilとする
+                audioPlayer = nil
+            }
+        } else {
+            // urlがnilなので再生できない
+            fatalError("Url is nil.")
+        }
     }
     
     @IBAction func tap(_ sender: Any) {
@@ -34,6 +52,7 @@ class SoundViewController: UIViewController {
         // 電源を切る
         // 音声をstopする
         //  画面をViewControllerへ戻す
+        dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1119ED8F2425E987002F1F46 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1119ED8E2425E987002F1F46 /* SoundViewController.swift */; };
+		1138D4192426E1D90064140D /* callplay1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1138D4142426E1D80064140D /* callplay1.png */; };
+		1138D41A2426E1D90064140D /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1138D4152426E1D80064140D /* background.jpg */; };
+		1138D41B2426E1D90064140D /* call.png in Resources */ = {isa = PBXBuildFile; fileRef = 1138D4162426E1D80064140D /* call.png */; };
+		1138D41C2426E1D90064140D /* child.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1138D4172426E1D80064140D /* child.jpg */; };
+		1138D41D2426E1D90064140D /* callplay2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1138D4182426E1D90064140D /* callplay2.png */; };
 		1176B1992426DBD700082773 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1176B1982426DBD700082773 /* AVFoundation.framework */; };
 		118ED1D02425A21500357DD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118ED1CF2425A21500357DD7 /* AppDelegate.swift */; };
 		118ED1D22425A21500357DD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118ED1D12425A21500357DD7 /* SceneDelegate.swift */; };
@@ -15,17 +20,17 @@
 		118ED1D72425A21500357DD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118ED1D52425A21500357DD7 /* Main.storyboard */; };
 		118ED1D92425A21A00357DD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 118ED1D82425A21A00357DD7 /* Assets.xcassets */; };
 		118ED1DC2425A21A00357DD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118ED1DA2425A21A00357DD7 /* LaunchScreen.storyboard */; };
-		118ED1EB2425A25F00357DD7 /* call.png in Resources */ = {isa = PBXBuildFile; fileRef = 118ED1E32425A25E00357DD7 /* call.png */; };
 		118ED1EC2425A25F00357DD7 /* callMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 118ED1E42425A25E00357DD7 /* callMusic.mp3 */; };
 		118ED1ED2425A25F00357DD7 /* baby.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 118ED1E52425A25E00357DD7 /* baby.mp3 */; };
-		118ED1EE2425A25F00357DD7 /* callplay1.png in Resources */ = {isa = PBXBuildFile; fileRef = 118ED1E62425A25E00357DD7 /* callplay1.png */; };
-		118ED1EF2425A25F00357DD7 /* child.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 118ED1E72425A25E00357DD7 /* child.jpg */; };
-		118ED1F02425A25F00357DD7 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 118ED1E82425A25E00357DD7 /* background.jpg */; };
-		118ED1F12425A25F00357DD7 /* callplay2.png in Resources */ = {isa = PBXBuildFile; fileRef = 118ED1E92425A25E00357DD7 /* callplay2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1119ED8E2425E987002F1F46 /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
+		1138D4142426E1D80064140D /* callplay1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callplay1.png; sourceTree = "<group>"; };
+		1138D4152426E1D80064140D /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		1138D4162426E1D80064140D /* call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = call.png; sourceTree = "<group>"; };
+		1138D4172426E1D80064140D /* child.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = child.jpg; sourceTree = "<group>"; };
+		1138D4182426E1D90064140D /* callplay2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callplay2.png; sourceTree = "<group>"; };
 		1176B1982426DBD700082773 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		118ED1CC2425A21500357DD7 /* SwiftMousouLINE1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMousouLINE1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		118ED1CF2425A21500357DD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,13 +40,8 @@
 		118ED1D82425A21A00357DD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		118ED1DB2425A21A00357DD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		118ED1DD2425A21A00357DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		118ED1E32425A25E00357DD7 /* call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = call.png; sourceTree = "<group>"; };
 		118ED1E42425A25E00357DD7 /* callMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = callMusic.mp3; sourceTree = "<group>"; };
 		118ED1E52425A25E00357DD7 /* baby.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = baby.mp3; sourceTree = "<group>"; };
-		118ED1E62425A25E00357DD7 /* callplay1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callplay1.png; sourceTree = "<group>"; };
-		118ED1E72425A25E00357DD7 /* child.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = child.jpg; sourceTree = "<group>"; };
-		118ED1E82425A25E00357DD7 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
-		118ED1E92425A25E00357DD7 /* callplay2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callplay2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +85,12 @@
 			isa = PBXGroup;
 			children = (
 				118ED1E52425A25E00357DD7 /* baby.mp3 */,
-				118ED1E82425A25E00357DD7 /* background.jpg */,
-				118ED1E32425A25E00357DD7 /* call.png */,
 				118ED1E42425A25E00357DD7 /* callMusic.mp3 */,
-				118ED1E62425A25E00357DD7 /* callplay1.png */,
-				118ED1E92425A25E00357DD7 /* callplay2.png */,
-				118ED1E72425A25E00357DD7 /* child.jpg */,
+				1138D4152426E1D80064140D /* background.jpg */,
+				1138D4162426E1D80064140D /* call.png */,
+				1138D4142426E1D80064140D /* callplay1.png */,
+				1138D4182426E1D90064140D /* callplay2.png */,
+				1138D4172426E1D80064140D /* child.jpg */,
 				118ED1CF2425A21500357DD7 /* AppDelegate.swift */,
 				118ED1D12425A21500357DD7 /* SceneDelegate.swift */,
 				118ED1D32425A21500357DD7 /* ViewController.swift */,
@@ -161,16 +161,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				118ED1F02425A25F00357DD7 /* background.jpg in Resources */,
+				1138D41C2426E1D90064140D /* child.jpg in Resources */,
 				118ED1DC2425A21A00357DD7 /* LaunchScreen.storyboard in Resources */,
-				118ED1F12425A25F00357DD7 /* callplay2.png in Resources */,
+				1138D41D2426E1D90064140D /* callplay2.png in Resources */,
+				1138D4192426E1D90064140D /* callplay1.png in Resources */,
+				1138D41A2426E1D90064140D /* background.jpg in Resources */,
 				118ED1D92425A21A00357DD7 /* Assets.xcassets in Resources */,
 				118ED1ED2425A25F00357DD7 /* baby.mp3 in Resources */,
 				118ED1EC2425A25F00357DD7 /* callMusic.mp3 in Resources */,
-				118ED1EF2425A25F00357DD7 /* child.jpg in Resources */,
 				118ED1D72425A21500357DD7 /* Main.storyboard in Resources */,
-				118ED1EB2425A25F00357DD7 /* call.png in Resources */,
-				118ED1EE2425A25F00357DD7 /* callplay1.png in Resources */,
+				1138D41B2426E1D90064140D /* call.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
