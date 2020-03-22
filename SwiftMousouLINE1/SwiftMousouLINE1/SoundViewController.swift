@@ -16,6 +16,7 @@ class SoundViewController: UIViewController {
     @IBOutlet var imageView2: UIImageView!
     
     var audioPlayer : AVAudioPlayer!
+    var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,12 +46,41 @@ class SoundViewController: UIViewController {
         // imageView2を表示させる
         
         // タイマーをスタートさせてラベルへ秒数を表示する
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(timercountUP), userInfo: nil, repeats: true)
+        
+        timeLabel.text = String(count)
+        
         // baby.mp3の音声を再生する
+        playBabySound()
+        
     }
     
+    func playBabySound(){
+        
+        if let url = Bundle.main.url(forResource: "callMusic", withExtension: "mp3"){
+            do{
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.play()
+            } catch {
+                // プレイヤー作成失敗
+                // その場合は、プレイヤーをnilとする
+                audioPlayer = nil
+            }
+        } else {
+            // urlがnilなので再生できない
+            fatalError("Url is nil.")
+        }
+    }
+    
+    func timercountUP(){
+        
+        count = count + 1
+        
+    }
     @IBAction func deny(_ sender: Any) {
         // 電源を切る
         // 音声をstopする
+        audioPlayer.stop()
         //  画面をViewControllerへ戻す
         dismiss(animated: true, completion: nil)
     }
