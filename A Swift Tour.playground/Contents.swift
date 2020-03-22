@@ -146,3 +146,55 @@ func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
 // 5回目 (9,5,120)
 let statistics = calculateStatistics(scores: [5, 3, 100, 3])
 print(statistics.sum)
+
+func returnFifteen() -> Int {
+    var y = 10
+    func add() {
+        y += 5
+    }
+    add()
+    return y
+}
+returnFifteen()
+
+
+func makeIncrementer() -> ((Int) -> Int) {
+    func addOne(number: Int) -> Int {
+        return  1 + number
+    }
+    return addOne
+}
+var increment = makeIncrementer()
+increment(7)
+
+//条件を設定して、結果によってtrue,falseを返す関数
+func hasAnyMatches(list: [Int], condition: (Int) -> Bool) -> Bool {
+    for item in list {
+        if condition(item) {
+            return true
+        }
+    }
+    return false
+}
+func lessThanTen(number: Int) -> Bool {
+    return number < 10
+}
+
+var numbers = [20,19,7,12]
+hasAnyMatches(list: numbers, condition: lessThanTen)
+
+//map:全要素に処理を適用したい時に使う
+let array = [1,2,3,4,5]
+let newArray = array.map { $0 * 5 }
+newArray
+
+let celsius = ["Tokyo": 14.0, "Osaka": 26.0]
+let fahrenheit = celsius.map{ ($0.0)}
+fahrenheit
+
+numbers.map({ (number: Int) -> Int in
+    let result = 3 * number
+    return result
+})
+
+
