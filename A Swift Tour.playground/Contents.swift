@@ -192,9 +192,67 @@ let celsius = ["Tokyo": 14.0, "Osaka": 26.0]
 let fahrenheit = celsius.map{ ($0.0)}
 fahrenheit
 
+// クロージャ:名前をつけずに定義する関数
+//  {(引数名: 引数の型) -> (戻り値の型) in
+//        処理
+//      return 戻り値
+//  }
+
 numbers.map({ (number: Int) -> Int in
     let result = 3 * number
     return result
 })
 
+let mappedNumbers = numbers.map({number in 3 * number})
+print(mappedNumbers)
 
+// $0:第一引数 $1:第２引数
+let sortedNumbers = numbers.sorted{ $0 > $1 }
+print(sortedNumbers)
+
+class Shape {
+    var numberOfSides = 0
+    func simpleDescription() -> String {
+        return "A shape with \(numberOfSides) sides."
+    }
+}
+
+var shape = Shape()
+shape.numberOfSides = 7
+var shapeDescription = shape.simpleDescription()
+
+
+class NamedShape {
+    var numberOfSides: Int = 0
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    func simpleDescription() -> String {
+        return "A shape with \(numberOfSides) sides."
+    }
+}
+
+//Double型:浮動小数点
+class Square: NamedShape {
+    var sideLength: Double
+    
+    init(sideLength: Double, name: String) {
+        self.sideLength = sideLength
+        super.init(name: name)
+        numberOfSides = 4
+    }
+    func area() -> Double {
+        return sideLength * sideLength
+    }
+    
+    //override:superクラスのメソッドを呼び出す時に使う
+    override func simpleDescription() -> String {
+        return "A square with sides of length \(sideLength)."
+    }
+}
+let test = Square(sideLength: 5.2, name: "my test square")
+test.area()
+test.simpleDescription()
