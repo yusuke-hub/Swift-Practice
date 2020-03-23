@@ -212,3 +212,103 @@ for (key, value) in sales {
 
 let q = [String: Int]()
 print(q.isEmpty)
+
+// ★関数
+//func sayHi() {
+//    print("hi")
+//}
+//sayHi()
+
+// func 関数名() -> 戻り値のデータ型を指定{}
+//func sayHi() -> String{
+//    return "hi"
+//}
+//print(sayHi())
+//
+//func sayHi(name: String) {
+//    print("hi \(name)")
+//}
+//sayHi()
+
+// nameの前にfromというラベルをつける
+//func sayHi(from name: String) {
+//    print("hi \(name)")
+//}
+//sayHi(from: "tom")
+
+// ↑の省略形
+//func sayHi(_ name: String) {
+//    print("hi \(name)")
+//}
+//sayHi("tom")
+
+// 引数に初期値を与える
+func sayHi(_ name: String = "tom") {
+    print("hi \(name)")
+}
+sayHi()
+
+// ★inout
+//func add10(x: Int) {
+//    x = x + 10 ← 引数は定数として扱われるので、再代入できない。エラーになる！
+//    print(x)
+//}
+
+func add10(x: inout Int) {
+    x = x + 10
+    print(x)
+}
+// inoutを使う時の注意点
+// 引数に変数を与えるときは&(アンパサンダ)を忘れない！
+var u = 10
+add10(x: &u)
+// 関数内で計算された値がuに戻ってくるので,uは20となる
+print(u)
+
+// ★class
+class User {
+    let name: String // クラスの中で宣言した変数をプロパティと呼ぶ
+    var score: Int
+    var level: Int {
+        get {
+            return Int(score / 10)
+        }
+        set {
+            if newValue >= 0 {
+                score = newValue * 10
+            }
+        }
+    }
+//    init(name: Srring, score: Int){
+    init(_ name: String, _ score: Int) {
+        self.name = name
+        self.score = score
+}
+    init(){
+        self.name = "bob"
+        self.score = 23
+    }
+}
+
+// クラスからインスタンスを生成
+//let user: User = User()
+let user = User()
+print(user.name)
+print(user.score)
+user.score = 26
+print(user.score)
+
+//let tom = User(name: "tom", score: 23)
+let tom = User("tom", 23)
+print(tom.name)
+print(tom.score)
+
+let bob = User()
+print(bob.name)
+print(bob.score)
+
+print(tom.level)
+tom.level = 5
+print(tom.score)
+tom.level = -3
+print(tom.score)
