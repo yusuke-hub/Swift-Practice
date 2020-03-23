@@ -134,8 +134,81 @@ if os != nil {
     print(os!) //unwrap
 }
 
-// Optional Binding
+// ★Optional Binding
 // もしosがnilじゃなかったら、osにvalueを代入する
 if let value = os {
     print(value)
 }
+
+// ★配列,タプル
+// ★辞書
+
+//var scores: [Int] = [50, 40]
+var scores = [50, 40]
+
+print(scores[0])
+scores[1] = 30
+print(scores)
+
+print(scores.count)
+print(scores.isEmpty)
+
+var names = [String]()
+names.append("kawabata")
+names.append("yusuke")
+names += ["dotinstall"]
+
+for name in names {
+    print(name)
+}
+
+//var items = ("apple", 5)
+//print(items.0)
+//items.1 = 8
+//print(items)
+
+//let (product, amount) = items
+////amountを使わない場合、以下のようにすれば安全に破棄できる
+//print(product, _) = items
+//print(product)
+
+var items = (product: "apple", amount: 5)
+print(items.product)
+
+// ★集合
+//var winners: Set<Int> = [3 , 5, 8, 8]
+var winners: Set = [3 , 5, 8, 8]
+print(winners)
+// 配列のようにそれぞれの要素にアクセスすることはできない
+print(winners.contains(3))
+winners.insert(10)
+winners.remove(5)
+print(winners)
+print(winners.count)
+
+// 空の集合を作る
+let es = Set<Int>()
+print(es.isEmpty)
+
+let a: Set = [1, 3, 5, 8]
+let b: Set = [3, 5, 8, 9]
+
+
+print(a.union(b))
+// 積集合:共通箇所
+print(a.intersection(b))
+// 差集合:共通箇所を引く
+print(a.subtracting(b))
+
+//var sales :Dictionary<String, Int> = ["kawabata": 200, "satou": 300]
+var sales = ["kawabata": 200, "satou": 300]
+sales["gorilla"] = 900
+print(sales["kawabata"] ?? "n.a. ")
+print(sales.count)
+
+for (key, value) in sales {
+    print("\(key): \(value)")
+}
+
+let q = [String: Int]()
+print(q.isEmpty)
