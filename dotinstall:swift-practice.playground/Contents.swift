@@ -266,49 +266,124 @@ add10(x: &u)
 print(u)
 
 // ★class
-class User {
-    let name: String // クラスの中で宣言した変数をプロパティと呼ぶ
-    var score: Int
-    var level: Int {
-        get {
-            return Int(score / 10)
-        }
-        set {
-            if newValue >= 0 {
-                score = newValue * 10
-            }
-        }
-    }
+//class User {
+//    let name: String // クラスの中で宣言した変数をプロパティと呼ぶ
+//    var score: Int
+//    var level: Int {
+//        get {
+//            return Int(score / 10)
+//        }
+//        set {
+//            if newValue >= 0 {
+//                score = newValue * 10
+//            }
+//        }
+//    }
 //    init(name: Srring, score: Int){
-    init(_ name: String, _ score: Int) {
-        self.name = name
-        self.score = score
-}
-    init(){
-        self.name = "bob"
-        self.score = 23
-    }
-}
+//    init(_ name: String, _ score: Int) {
+//        self.name = name
+//        self.score = score
+//}
+//    init(){
+//        self.name = "bob"
+//        self.score = 23
+//    }
+//}
 
 // クラスからインスタンスを生成
 //let user: User = User()
-let user = User()
-print(user.name)
-print(user.score)
-user.score = 26
-print(user.score)
+//let user = User()
+//print(user.name)
+//print(user.score)
+//user.score = 26
+//print(user.score)
 
 //let tom = User(name: "tom", score: 23)
-let tom = User("tom", 23)
-print(tom.name)
-print(tom.score)
+//let tom = User("tom", 23)
+//print(tom.name)
+//print(tom.score)
+//
+//let bob = User()
+//print(bob.name)
+//print(bob.score)
+//
+//print(tom.level)
+//tom.level = 5
+//print(tom.score)
+//tom.level = -3
+//print(tom.score)
 
-let bob = User()
+// プロパティの値を監視する
+//class User {
+//    let name: String
+//    var score: Int {
+//        willSet {
+//            // before change
+//            print("\(score) -> \(newValue)")
+//    }
+//        didSet {
+//            // after change
+//            print("Changed: \(score - oldValue)")
+//        }
+//    }
+//    init(_ name: String, _ score: Int) {
+//        self.name = name
+//        self.score = score
+//    }
+//}
+//
+//let tom = User("tom", 23)
+//tom.score = 53
+//tom.score = 40
+
+// メソッドを使う
+//class User {
+//    let name: String
+//    var score: Int
+//    init(_ name: String,_ score: Int) {
+//        self.name = name
+//        self.score = score
+//    }
+//    func sayHi(){
+//        print("hi \(name)")
+//    }
+//    func sayHi(_ msg: String) {
+//        print("\(msg) \(name)")
+//    }
+//
+//}
+
+// let tom = User("tom", 23)
+// tom.sayHi()
+// tom.sayHi(msg: "hola")
+// tom.sayHi("hole")
+
+// ★クラスの継承
+// User -> AdminUser
+
+class User {
+    let name: String
+    var score: Int
+    init(_ name: String, _ score: Int) {
+        self.name = name
+        self.score = score
+    }
+    func sayHi(){
+        print("hi \(name)")
+    }
+}
+class AdminUser: User {
+    func sayHello() {
+        print("hello \(name)")
+    }
+    override func sayHi() {
+        print("[admin] hi \(name)")
+    }
+}
+
+let tom = User("tom", 23)
+let bob = AdminUser("bob", 33)
 print(bob.name)
 print(bob.score)
-
-print(tom.level)
-tom.level = 5
-print(tom.score)
-tom.level = -3
-print(tom.score)
+bob.sayHi()
+bob.sayHello()
