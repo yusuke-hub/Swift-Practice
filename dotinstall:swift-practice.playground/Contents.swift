@@ -361,29 +361,208 @@ print(u)
 // ★クラスの継承
 // User -> AdminUser
 
-class User {
-    let name: String
-    var score: Int
-    init(_ name: String, _ score: Int) {
+//class User {
+//    let name: String
+//    var score: Int
+//    init(_ name: String, _ score: Int) {
+//        self.name = name
+//        self.score = score
+//    }
+//    func sayHi(){
+//        print("hi \(name)")
+//    }
+//}
+//class AdminUser: User {
+//    func sayHello() {
+//        print("hello \(name)")
+//    }
+//    override func sayHi() {
+//        print("[admin] hi \(name)")
+//    }
+//}
+//
+//let tom = User("tom", 23)
+//let bob = AdminUser("bob", 33)
+//print(bob.name)
+//print(bob.score)
+//bob.sayHi()
+//bob.sayHello()
+
+// static: プロパティやメソッドの頭につけることで、クラスから直接呼び出せるようにする
+// class: overrideしたい場合は,staticではなくclassを用いるs
+//class User {
+//    let name: String
+//    var score: Int
+//    static var count = 0
+//    init(_ name: String, _ score: Int) {
+//        self.name = name
+//        self.score = score
+//        User.count += 1
+//    }
+//    func sayHi() {
+//        print("hi \(name)")
+//    }
+//    class func getInfo() {
+//        print("\(count) instances")
+//    }
+//}
+//
+//class AdminUser: User {
+//    func sayHello() {
+//        print("hello \(name)")
+//    }
+//    override func sayHi() {
+//        print("[admin] hi \(name)")
+//    }
+//    override class func getInfo() {
+//        print("[admin] \(count) instances")
+//    }
+//}
+//
+//User.count
+//User.getInfo()
+//let tom = User("tom", 23)
+//User.getInfo()
+//
+//AdminUser.getInfo()
+//let bob = AdminUser("bob", 33)
+//AdminUser.getInfo()
+
+//★型キャスト: 変数や定数の型を、より具体的な型や汎用的な型として扱うこと
+//class User {
+//    let name: String
+//    init(_ name: String) {
+//        self.name
+//    }
+//}
+//class AdminUser: User{}
+//
+//let tom = User("tom")
+//let bob = AdminUser("bob")
+
+// クラスの方が違うにもかかわらず、エラーが出ていないのはSwiftがAdminUserクラスはUserクラスを、同じ種類として認識しているから
+//let users: [User] = [tom, bob]
+//
+//for user in users {
+//    if let u = user as? AdminUser {
+//        print(u,name)
+//    }
+//    if user is AdminUser {
+//        let u = user as! AdminUser
+//        print(u.name)
+//    }
+//}
+
+//　★プロトコル:必ず実装するプロパティやメソッドを最初に宣言する
+// これをクラス側で実装してねいうお約束なので、ここで初期化する必要はない
+// get: 読み取り専用 set: 書き取り専用
+//protocol Printable {
+//    var type: String{ get }
+//    var count: Int { get set }
+//    func printout()
+//}
+//class User: Printable {
+//    let type = "Laser"
+//    var count = 0
+//    let name: String
+//    init(_ name: String) {
+//        self.name = name
+//    }
+//    func printout() {
+//        count += 1
+//        print("\(type): \(count)")
+//    }
+//}
+//
+//let tom = User("tom")
+//tom.printout()
+//tom.printout()
+//tom.printout()
+
+//extension String {
+//    ver length: Int {
+//        return self.characters.count
+//    }
+//}
+//
+//let msg = "hello"
+//print(msg.characters.count)
+//print(msg.length)
+
+//protocol Printable {
+//    func printout()
+//}
+//
+//extension Printable {
+//    func printout() {
+//        print("now printing...")
+//    }
+//}
+//class User {
+//    let name: String
+//    init(_ name: String) {
+//        self.name = name
+//    }
+//}
+
+// ★Int, Double, Array .. -> 値型
+
+//var original = 10
+//var copy = original
+//original = 20
+//print(original)
+//print(copy)
+
+// ★Class -> 参照型
+//class User {
+//    var name: String
+//    init(_ name: String) {
+//        self.name = name
+//    }
+//}
+//
+//var original = User("tom")
+// 変数にクラスから作ったインスタンスを代入すると、変数はそのクラスのデータの格納場所を参照するようになる
+//var copy = original
+//original.name = "bob"
+//print(original.name)
+//print(copy.name)
+
+// ★構造体: クラスとほぼ同じ機能、値型、継承ができない
+struct User {
+    var name: String
+    init(_ name: String) {
         self.name = name
-        self.score = score
     }
-    func sayHi(){
-        print("hi \(name)")
-    }
-}
-class AdminUser: User {
-    func sayHello() {
-        print("hello \(name)")
-    }
-    override func sayHi() {
-        print("[admin] hi \(name)")
+//    structではプロパティの変更にmutatingをつける
+    mutating func changeName(){
+        self.name = name.uppercased()
     }
 }
 
-let tom = User("tom", 23)
-let bob = AdminUser("bob", 33)
-print(bob.name)
-print(bob.score)
-bob.sayHi()
-bob.sayHello()
+var original = User("tom")
+var copy = original
+original.name = "bob"
+print(original.name)
+print(copy.name)
+
+// ★列挙型:関連する値をまとめて型にしたもの
+//enum Direction {
+//    case right
+//    case left
+//}
+//var dir: Direction
+//dir = Direction.right
+//dir = .right
+//switch(dir) {
+//case .right:
+//    print("right")
+//case .left:
+//    print("left")
+//}
+
+enum Direction: Int {
+    case right = 1
+    case left = -1
+}
+print(Direction.right.rawValue)
