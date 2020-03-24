@@ -134,7 +134,7 @@ if os != nil {
     print(os!) //unwrap
 }
 
-// ★Optional Binding
+// ★Optional Binding: [変数valueがnilでない場合]と[nilだった場合]の処理を分岐できる
 // もしosがnilじゃなかったら、osにvalueを代入する
 if let value = os {
     print(value)
@@ -529,22 +529,22 @@ print(u)
 //print(copy.name)
 
 // ★構造体: クラスとほぼ同じ機能、値型、継承ができない
-struct User {
-    var name: String
-    init(_ name: String) {
-        self.name = name
-    }
+//struct User {
+//    var name: String
+//    init(_ name: String) {
+//        self.name = name
+//    }
 //    structではプロパティの変更にmutatingをつける
-    mutating func changeName(){
-        self.name = name.uppercased()
-    }
-}
-
-var original = User("tom")
-var copy = original
-original.name = "bob"
-print(original.name)
-print(copy.name)
+//    mutating func changeName(){
+//        self.name = name.uppercased()
+//    }
+//}
+//
+//var original = User("tom")
+//var copy = original
+//original.name = "bob"
+//print(original.name)
+//print(copy.name)
 
 // ★列挙型:関連する値をまとめて型にしたもの
 //enum Direction {
@@ -566,3 +566,132 @@ enum Direction: Int {
     case left = -1
 }
 print(Direction.right.rawValue)
+
+// ★Generics: どのデータ型でも使えるようにする（汎用化)
+
+//func getThree(x: Int) {
+func getThree<T>(x: T) {
+    print(x)
+    print(x)
+    print(x)
+}
+
+//getThree(x: 4)
+getThree(x: "hogehoge")
+getThree(x: 3.3)
+
+// ★subscript: クラスから生成したインスタンスにindexをつける事ができる
+class Team {
+    var members = ["taguchi", "fkoji", "dotinstall"]
+    subscript(index: Int) -> String {
+        get {
+            return members[index]
+        }
+        set {
+            members.insert(newValue, at: index)
+        }
+    }
+}
+
+var giants = Team()
+giants[0] = "kawabata"
+print(giants[1])
+giants[3] = "Kobayasi"
+print(giants[3])
+
+
+// 処理が長くなったり、条件分岐が続くと、どれが正常処理でどれが異常処理かわかりにくくなる
+//func sayHi(_ msg: String?) {
+//    if let s = msg {
+//        print(s)
+//    } else {
+//        print("value not set!")
+//    }
+//}
+
+// ★earlu return, early exit
+//　異常だったらすぐにreturnして関数を抜ける
+//func sayHi(_ msg: String?) {
+//    if msg == nil {
+//        print("value not set!")
+//        return
+//    }
+//}
+
+// ★guard:異常があった時の処理をわかりやすく書くための仕組み
+// guardの下の処理では.unwrapされた変数をそのまま使える
+func sayHi(_ msg: String?) {
+    guard let s = msg else {
+        print("value not set!")
+        return
+    }
+    print(s)
+}
+
+sayHi(nil)
+sayHi("hello")
+
+// ★例外処理
+//enum LoginError: Error {
+//    case emptyName
+//    case shortName
+//}
+//
+//class User {
+//    let name: String
+//    init(_ name: String) {
+//        self.name = name
+//    }
+//    func login() throws {
+//        guard name != "" else {
+//            throw LoginError.emptyName
+//        }
+//        guard name.characters.count > 5 else {
+//            throw LoginError.shortName
+//        }
+//        print("login success")
+//    }
+//}
+//
+//let tom = User("tom")
+//do {
+//    try tom.login()
+//} catch LoginError.emptyName {
+//    print("please enter your name")
+//} catch LoginError.shortName {
+//    print("too short")
+//}
+
+// Optional Chaining
+//class user {
+//    var name: String = ""
+//}
+//
+//let user: User
+//user = User()
+//user.name = "him"
+//let s = user.name.uppercased()
+//print(s)
+
+class User {
+    var name: String? = ""
+}
+
+let user: User?
+user = User()
+user?.name = "him"
+if let s = user?.name?.uppercased(){
+    print(s)
+}
+
+// 暗黙的アンラップ Implicitly Unwrapped Optional
+
+//var msgs: String?
+var msgs: String! = "hello"
+
+//if msg != nil {
+//    print(msgs!)
+//}
+
+print(msgs)
+
